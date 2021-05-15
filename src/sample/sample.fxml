@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <left>
+      <HBox prefHeight="700.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="90.0" styleClass="dark-gray-background" stylesheets="@values/style.css">
+               <children>
+                  <Pane prefHeight="319.0" prefWidth="69.0" />
+                  <ImageView fitHeight="48.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/chat1.png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="150.0" prefWidth="38.0" VBox.vgrow="ALWAYS" />
+                  <ImageView fitHeight="48.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/logout.png" />
+                     </image>
+                  </ImageView>
+               </children></VBox>
+            <VBox prefHeight="700.0" prefWidth="300.0" styleClass="gray-background" stylesheets="@values/style.css">
+               <children>
+                  <VBox prefHeight="42.0" prefWidth="239.0" stylesheets="@values/style.css">
+                     <children>
+                        <Pane prefHeight="31.0" prefWidth="206.0">
+                           <children>
+                              <TextField alignment="TOP_LEFT" layoutX="44.0" layoutY="8.0" prefHeight="15.0" prefWidth="186.0" promptText="Search" styleClass="transparent-background" stylesheets="@values/style.css">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Pane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="dark-gray-background" />
+                        <String fx:value="radius" />
+                     </styleClass></VBox>
+               </children></VBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox alignment="CENTER">
+         <VBox>
+            <children>
+               <HBox prefHeight="22.0" prefWidth="653.0">
+                  <children>
+                     <Label contentDisplay="CENTER" prefHeight="31.0" text="You" textFill="#9da7a7">
+                        <font>
+                           <Font name="DejaVu Sans Mono Bold" size="24.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+                  <VBox.margin>
+                     <Insets bottom="20.0" left="20.0" top="20.0" />
+                  </VBox.margin>
+               </HBox>
+               <Pane VBox.vgrow="ALWAYS">
+                  <children>
+                     <Pane prefHeight="2.0" prefWidth="99999.0" styleClass="dark-gray-background" stylesheets="@values/style.css" />
+                  </children>
+               </Pane>
+               <HBox alignment="CENTER_LEFT">
+                  <TextArea fx:id="allMessages" prefHeight="9999.0" prefWidth="653.0" styleClass="transparent-background" stylesheets="@values/style.css" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" />
+               </HBox>
+               <HBox alignment="CENTER" maxHeight="40" VBox.vgrow="ALWAYS">
+                  <children>
+                     <TextField fx:id="sendingText" minHeight="45.0" minWidth="433.0" onAction="#sendMessageClicked" prefHeight="112.0" prefWidth="433.0" promptText="Type something to send ..." stylesheets="@values/style.css">
+                        <styleClass>
+                           <String fx:value="transparent-background" />
+                           <String fx:value="radius" />
+                        </styleClass>
+                        <HBox.margin>
+                           <Insets right="20.0" />
+                        </HBox.margin>
+                     </TextField>
+                     <Button mnemonicParsing="false" onAction="#sendMessageClicked" text="Send" />
+                  </children>
+                  <VBox.margin>
+                     <Insets bottom="20.0" top="20.0" />
+                  </VBox.margin>
+               </HBox>
+            </children>
+         </VBox>
+      </VBox>
+   </center>
+</BorderPane>
